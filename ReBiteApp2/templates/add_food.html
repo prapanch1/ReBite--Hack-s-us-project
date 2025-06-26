@@ -1,0 +1,7 @@
+<h1>Add Food Item</h1>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Add Item</button>
+</form>
+<a href="{% url 'avail_food' %}">Go to Menu</a>

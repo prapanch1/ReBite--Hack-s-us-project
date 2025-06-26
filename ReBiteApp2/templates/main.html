@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Welcome</title>
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="image/x-icon" />
+    
+    <!-- Bootstrap & Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}" />
+    
+    <style>
+        .hero_area {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('{% static "images/hero-bg.jpg" %}') no-repeat center center/cover;
+            text-align: center;
+            color: white;
+        }
+        .content-box {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 30px;
+            margin: 10px;
+            font-size: 1.2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            color: white;
+            background: #ffbe33;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #e69c00;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero_area">
+        <div class="content-box">
+            <h2>Welcome!</h2>
+            <p>Do you want to Sign Up or Log In?</p>
+            <div>
+                <a href="{% url 'send_otp' %}" class="btn">Sign Up</a>
+                <a href="{% url 'login' %}" class="btn">Log In</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
