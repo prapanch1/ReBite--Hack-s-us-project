@@ -29,8 +29,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'localhost',
-    '127.0.0.1',
-    '192.168.208.145'  # Add your laptop's IP here
+    '127.0.0.0.0',
+    '192.168.00.00'  
 ]
 
 
@@ -112,8 +112,6 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'prasadkakkoor@gmail.com'  # Replace with your Gmail address
-EMAIL_HOST_PASSWORD = 'ttgb bkbf lwwt jrbf'  # Replace with your Gmail app password or password
 
 
 # Internationalization
